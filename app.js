@@ -11,7 +11,7 @@ io.on('connection', (socket) => {
   let name
   socket.on('new user', (username) => {
     name = username
-    io.emit("new user", `${username} has joined the chat!`)
+    io.emit("message", `${username} has joined the chat! 🥳`)
   })
 
   socket.on('message', (message) => {
@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
   })
 
   socket.on('disconnect', () => {
-    console.log('User disconnected')
+    io.emit('message', `${name} disconnected 😔`)
   })
 })
 
