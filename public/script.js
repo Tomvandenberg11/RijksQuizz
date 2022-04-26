@@ -1,49 +1,35 @@
 let socket = io()
-let ul = document.querySelector('section ul')
 let input = document.querySelector('input')
 const nameContainer = document.querySelector('.username')
-const chat = document.querySelector('section:last-of-type')
-const chatForm = document.querySelector('.chatForm')
-const chatText = document.querySelector('#chatText')
+const chat = document.querySelector('.start')
+const startButton = document.querySelector('.startButton')
 
-const apiUrl = `https://www.rijksmuseum.nl/api/nl/collection?key=tn2lRhSP&ps=1&imgonly=true`
+const users = document.querySelector('.users > ul')
 
-let randomMaker
-let randomPainting
-
-// FETCHING THE DATA
-fetch(apiUrl)
-  .then((data) => data.json())
-  // .then((data) => console.log(data.artObjects[0].principalOrFirstMaker))
-  .then((data) => {
-    randomMaker = data.artObjects[0].principalOrFirstMaker
-    randomPainting = data.artObjects[0].webImage.url
-  })
-  .catch((error) => console.log(error))
-  .finally(() => console.log("Data loaded"))
 
 nameContainer.addEventListener('submit', event => {
   event.preventDefault()
   if (input.value) {
     socket.emit('new user', input.value)
-    nameContainer.classList.add('displayNone')
+    document.querySelector('.username').classList.add('displayNone')
     chat.classList.remove('displayNone')
   }
 })
 
-chatForm.addEventListener('submit', event => {
-  event.preventDefault()
-  if (chatText.value) {
-    socket.emit('nextPainting', chatText.value)
-    chatText.value = ''
-  }
-  ul.appendChild(Object.assign(document.createElement('li'), { textContent: randomMaker }))
-  ul.appendChild(Object.assign(document.createElement('img'), { src: randomPainting }))
-
+socket.on('new user', user => {
+  users.appendChild(Object.assign(document.createElement('li'), { textContent: user }))
 })
 
-socket.on('nextPainting', randomMaker => {
-  ul.appendChild(Object.assign(document.createElement('li'), { textContent: randomMaker }))
-  ul.scrollTop = ul.scrollHeight
+
+startButton.addEventListener("click", (e) => {
+  e.preventDefault()
+
+  document.querySelector('.start').classList.add('displayNone')
+  document.querySelector('.item').classList.remove('displayNone')
 })
 
+socket.on('showData', (artData) => {
+  document.querySelector('.item > ul').appendChild(Object.assign(document.createElement('li'), { textContent: artData.text }))
+  document.querySelector('.item > ul').appendChild(Object.assign(document.createElement('img'), { src: artData.image }))
+  console.log(artData.maker)
+})

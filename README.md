@@ -27,6 +27,12 @@
 <!-- This would be a good place for your data life cycle ♻️-->
 
 ## To do
+- Getting all users on screen
+- Next art on good answer
+- Punten voor goed antwoord
+- Opmaak
+- Melding geode antwoord
+- 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 ## Bronnen

@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barebone chat</title>
+    <link rel="shortcut icon" href="https://data.rijksmuseum.nl/favicon.ico" type="image/x-icon">
+    <title>RijksQuizz</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
 <main>
+    <section class="users">
+        <ul></ul>
+    </section>
     <section class="username">
+        <h1>RijksQuizz</h1>
         <form>
             <label>What's your name?</label>
             <input type="text" name="username">
             <button><span>Join quiz</span></button>
         </form>
     </section>
-    <section class="chat displayNone">
+
+    <section class="start displayNone">
+        <button class="startButton">Start!</button>
+    </section>
+
+    <section class="item displayNone">
         <ul></ul>
-        <form class="chatForm">
-            <input id="chatText" type="text" autocomplete="off">
-            <button><span>Send</span></button>
-        </form>
+        <input type="text" placeholder="Your answer">
     </section>
 </main>
 
