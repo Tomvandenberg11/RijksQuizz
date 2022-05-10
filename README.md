@@ -6,14 +6,14 @@ De website is [hier](https://lekker-chatten.herokuapp.com/ "RijksDigital") te zi
 ![Screenshot](public/images/screenshot.png)
 
 ## Inhoudsopgave
-<!-- Maybe a table of contents here? 📚 -->
+- 
 
-## Ideeën
+## Ideeën 💡
 1. Een applicatie met de Spotify app waarbij de gebruikers samen kunnen luisteren naar hetzelfde lied.
 2. Een quiz met meerdere gebruikers met vragen over voetbal.
 3. Een quiz met schilderijen van het Rijksmuseum waarbij de gebruikers verschillende schilderijen te zien krijgen en kunnen gokken welke schilder er is.
 
-## Installeren
+## Installeren ⚙️
 
 #### Cloning
 
@@ -35,12 +35,12 @@ Als je de boven staande stappen gevolgd hebt kan de app opgestart worden door:
 te runnen in de terminal.
 Je ziet dan een bericht in de terminal staan op welke link de app te zien is.
 
-## Gebruik
+## Gebruik 💪🏼
 Het spel kan gespeeld worden met meerdere gebruikers. De gebruiker kan dit spel spelen met een eigen gekozen username. Vervolgens kan de speler gokken door te typen in het invoerveld. Vervolgens krijgt de gebruiker een melding van een fout of goed antwoord.
 
 Alle gebruikers krijgen een melding als er een speler connect of disconnect.
 
-## API
+## API 💿
 Voor dit project heb ik de API van het Rijksmuseum gebruikt. De API is vrij te gebruiken en bevat zo goed als alle
 schilderijen in het Rijksmuseum. Meer informatie over deze API vind je [hier](https://data.rijksmuseum.nl/object-metadata/api/).
 
@@ -51,7 +51,7 @@ De API wordt gebruikt doordat de schilderijen en kunstenaars opgeslagen en laten
 #### API datamodel
 ![Datamodel](public/images/datamodel.png)
 
-## Real time events
+## Real time events ⏩
 
 #### Connection
 Dit event wordt uitgevoerd wanneer er een nieuwe speler verbind met de quiz. Nu wordt er een connectie gemaakt met de socket.
@@ -72,10 +72,10 @@ Dit event wordt uitgevoerd wanneer er een speler gokt op het schilderij. Vervolg
 Data wordt op dit moment server-side opgeslagen in een array. Dit gebeurd op dit moment alleen voor de actieve spelers. Elke keer als er een speler connect wordt de naam opgeslagen in een array. Als de desbetreffende speler weer disconnect wordt de naam verwijdert uit de array.
 
 
-## Data life cycle
+## Data life cycle ♽
 ![Datamodel](public/images/data_lifecycle.png)
 
-## Wishlist
+## Wishlist 🧞‍♂️
 
 **M**ust haves
 - Gebruikers kunnen eigen gebruikersnaam opgegeven ✅
@@ -103,7 +103,7 @@ Data wordt op dit moment server-side opgeslagen in een array. Dit gebeurd op dit
 **W**ould haves
 - Firebase implementeren voor scorebord
 
-## Packages
+## Packages 📦
 #### Express
 Express is een `node.js` framework waarbij de applicatie server-side gedraaid kan worden. 
 
