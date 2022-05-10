@@ -13,24 +13,31 @@
 
 <main>
     <section class="users">
+        <p><b>Players in this session:</b></p>
         <ul></ul>
     </section>
     <section class="username">
         <h1>RijksQuizz</h1>
+
+        <img src="https://cdn.nos.nl/image/2022/01/03/817669/1024x576a.jpg" alt="example artwork"/>
         <form>
             <label>What's your name?</label>
-            <input type="text" name="username">
+            <input id="name" type="text" name="username" maxlength="20">
             <button><span>Join quiz</span></button>
         </form>
     </section>
 
     <section class="start displayNone">
+        <p>Welcome to the one and only RijksQuizz!<br><br>Once you've clicked the button, you'll see a random artwork from the Rijksmuseum. The one who guesses the painter of the shown artwork first, gets a point!</p>
         <button class="startButton">Start!</button>
     </section>
 
     <section class="item displayNone">
-        <ul></ul>
-        <input type="text" placeholder="Your answer">
+        <article></article>
+        <form id="answer">
+            <input id="answerInput" type="text" placeholder="Your answer">
+            <button>Submit</button>
+        </form>
     </section>
 </main>
 
