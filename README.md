@@ -1,20 +1,22 @@
 # Real-Time Web: RijksQuizz
 RijksQuizz is een applicatie waarbij meerdere gebruikers kunnen gokken naar de schilder bij het schilderij. De schilderijen worden random ingeladen. 
 
-De website is [hier](https://lekker-chatten.herokuapp.com/ "RijksDigital") te zien.
+De website is [hier](https://lekker-chatten.herokuapp.com/ "RijksQuizz") te zien.
 
 ![Screenshot](public/images/screenshot.png)
 
 ## Inhoudsopgave
-- [hier](#idee%C3%ABn- "RijksDigital")
-- [hier](#installeren-%EF%B8%8F "RijksDigital")
-- [hier](#gebruik- "RijksDigital")
-- [hier](#api- "RijksDigital")
-- [hier](#real-time-events- "RijksDigital")
-- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
-- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
-- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
-- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
+- [Ideeën 💡](#idee%C3%ABn- "RijksQuizz")
+- [Installeren ⚙️](#installeren-%EF%B8%8F "RijksQuizz")
+- [Gebruik 💪🏼](#gebruik- "RijksQuizz")
+- [API 💿](#api- "RijksQuizz")
+- [Real time events ⏩](#real-time-events- "RijksQuizz")
+- [Data management ✍🏼](#data-management- "RijksQuizz")
+- [Data life cycle ♽](#data-life-cycle- "RijksQuizz")
+- [Wishlist 🧞‍♂️](#wishlist-%EF%B8%8F "RijksQuizz")
+- [Packages 📦](#packages- "RijksQuizz")
+- [Licence 👨🏻‍⚖️](#licence-%EF%B8%8F "RijksQuizz")
+- [Credits 📣](#credits- "RijksQuizz")
 
 ## Ideeën 💡
 1. Een applicatie met de Spotify app waarbij de gebruikers samen kunnen luisteren naar hetzelfde lied.
