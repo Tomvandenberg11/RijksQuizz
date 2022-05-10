@@ -6,7 +6,15 @@ De website is [hier](https://lekker-chatten.herokuapp.com/ "RijksDigital") te zi
 ![Screenshot](public/images/screenshot.png)
 
 ## Inhoudsopgave
-- 
+- [hier](#idee%C3%ABn- "RijksDigital")
+- [hier](#installeren-%EF%B8%8F "RijksDigital")
+- [hier](#gebruik- "RijksDigital")
+- [hier](#api- "RijksDigital")
+- [hier](#real-time-events- "RijksDigital")
+- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
+- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
+- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
+- [hier](https://github.com/Tomvandenberg11/RijksQuizz#installeren-%EF%B8%8F "RijksDigital")
 
 ## Ideeën 💡
 1. Een applicatie met de Spotify app waarbij de gebruikers samen kunnen luisteren naar hetzelfde lied.
@@ -68,7 +76,7 @@ Dit event wordt uitgevoerd wanneer er op de 'Start' knop gedrukt wordt. Als dit 
 #### Guessing
 Dit event wordt uitgevoerd wanneer er een speler gokt op het schilderij. Vervolgens wordt er gecheckt of de gok van de speler goed is. Als dit het geval is krijgen alle spelers een bericht te zien dat de schilder geraden is.
 
-## Data management
+## Data management ✍🏼
 Data wordt op dit moment server-side opgeslagen in een array. Dit gebeurd op dit moment alleen voor de actieve spelers. Elke keer als er een speler connect wordt de naam opgeslagen in een array. Als de desbetreffende speler weer disconnect wordt de naam verwijdert uit de array.
 
 
