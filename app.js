@@ -20,7 +20,6 @@ const {
 
 
 // Setting up global variables
-let sortedData
 const allUsers = []
 let randomArt
 let artData
@@ -47,23 +46,26 @@ filterData()
   .then(() => console.log('Filtering data'))
 
 // Picking artworks from the painters
+let sortedData
+let round = 0
+
 const sortData = async () => {
   const data = await filterData()
   const sortingData = data.sort(() => .5 - Math.random())
 
   sortedData = sortingData
-  return sortingData
+
+  return sortedData
 }
 
 // Picking a random artworks
 sortData()
   .then(() => console.log('Loading the data..'))
-  .then(() => randomArt = sortedData[Math.floor(Math.random()*sortedData.length)])
   .then(() => {
     artData = {
-      title: randomArt.title,
-      image: randomArt.webImage.url,
-      maker: randomArt.principalOrFirstMaker
+      title: sortedData[round].title,
+      image: sortedData[round].webImage.url,
+      maker: sortedData[round].principalOrFirstMaker
     }
   })
   .catch((err) => console.log(err))
@@ -96,6 +98,14 @@ io.on('connection', (socket) => {
     // If guess is correct, emmit "antwoord"
     if (guess.includes(goodAnswer)) {
       io.emit("antwoord", artist)
+
+      round = round +1
+      artData = {
+        title: sortedData[round].title,
+        image: sortedData[round].webImage.url,
+        maker: sortedData[round].principalOrFirstMaker
+      }
+      io.emit('showData', artData)
     }
   })
 

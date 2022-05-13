@@ -102,7 +102,7 @@ Data wordt op dit moment server-side opgeslagen in een array. Dit gebeurd op dit
 - Alle gebruikers kunnen zien of er een nieuwe speler weggaat ✅
 - Data management ✅
 - Zorgen dat het antwoord in lowercase gecontroleerd wordt ✅
-- Naar het volgende schilderij gaan bij een goed antwoord
+- Naar het volgende schilderij gaan bij een goed antwoord ✅
 - Melding voor foute antwoord 
 - UI stack toevoegen
 - Mooiere alert voor goed geraden schilderij
