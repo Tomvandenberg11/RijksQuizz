@@ -158,6 +158,11 @@ img {
     display: none;
 }
 
+.wrongAnswer {
+    outline: none !important;
+    border: 2px solid darkred !important;
+}
+
 @media only screen and (max-width: 800px) {
     section {
         width: 90% !important;

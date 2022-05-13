@@ -110,6 +110,8 @@ io.on('connection', (socket) => {
         maker: sortedData[painting].principalOrFirstMaker
       }
       io.emit('showData', artData)
+    } else {
+        io.emit('wrongAnswer')
     }
   })
 

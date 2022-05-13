@@ -103,8 +103,7 @@ Data wordt op dit moment server-side opgeslagen in een array. Dit gebeurd op dit
 - Data management ✅
 - Zorgen dat het antwoord in lowercase gecontroleerd wordt ✅
 - Naar het volgende schilderij gaan bij een goed antwoord ✅
-- Melding voor foute antwoord 
-- UI stack toevoegen
+- Melding voor foute antwoord ✅
 - Mooiere alert voor goed geraden schilderij
 
 **S**hould haves
