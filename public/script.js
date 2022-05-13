@@ -48,7 +48,7 @@ startButton.addEventListener("click", (e) => {
 // When showing artwork, append artwork to html
 socket.on('showData', (artData) => {
   document.querySelector('.item > article').innerHTML = ''
-  answerField.value = ''
+  document.querySelector('#answer > input').value = ''
   document.querySelector('.item > article').appendChild(Object.assign(document.createElement('p'), { textContent: artData.title }))
   document.querySelector('.item > article').appendChild(Object.assign(document.createElement('img'), { src: artData.image }))
   console.log(artData.title)

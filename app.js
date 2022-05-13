@@ -21,8 +21,9 @@ const {
 
 // Setting up global variables
 const allUsers = []
-let randomArt
 let artData
+let sortedData
+let painting = 0
 
 
 // Receiving data from API
@@ -45,10 +46,8 @@ const filterData = async () => {
 filterData()
   .then(() => console.log('Filtering data'))
 
-// Picking artworks from the painters
-let sortedData
-let round = 0
 
+// Picking artworks from the painters
 const sortData = async () => {
   const data = await filterData()
   const sortingData = data.sort(() => .5 - Math.random())
@@ -58,25 +57,28 @@ const sortData = async () => {
   return sortedData
 }
 
+
 // Picking a random artworks
 sortData()
   .then(() => console.log('Loading the data..'))
   .then(() => {
     artData = {
-      title: sortedData[round].title,
-      image: sortedData[round].webImage.url,
-      maker: sortedData[round].principalOrFirstMaker
+      title: sortedData[painting].title,
+      image: sortedData[painting].webImage.url,
+      maker: sortedData[painting].principalOrFirstMaker
     }
   })
   .catch((err) => console.log(err))
 
+
 // Setting up Socket connection
 io.on('connection', (socket) => {
 
+
   // Global variable for connecting name
   let name
-
   io.emit("new user", allUsers)
+
 
   // If new user connects, pushing name to allUsers array and emitting "new user"
   socket.on('new user', (username) => {
@@ -85,29 +87,32 @@ io.on('connection', (socket) => {
     io.emit("new user", allUsers)
   })
 
+
   // Emitting artwork
   io.emit('showData', artData)
+
 
   // If guessing, filtering answer and guess to lowercase to validate
   socket.on('answer', (answer) => {
     const artist = artData.maker
     const goodAnswer = artData.maker.toLowerCase()
-
     const guess = answer.toLowerCase()
+
 
     // If guess is correct, emmit "antwoord"
     if (guess.includes(goodAnswer)) {
       io.emit("antwoord", artist)
 
-      round = round +1
+      painting = painting + 1
       artData = {
-        title: sortedData[round].title,
-        image: sortedData[round].webImage.url,
-        maker: sortedData[round].principalOrFirstMaker
+        title: sortedData[painting].title,
+        image: sortedData[painting].webImage.url,
+        maker: sortedData[painting].principalOrFirstMaker
       }
       io.emit('showData', artData)
     }
   })
+
 
   // Emitting if user disconnects and removing name from array
   socket.on('disconnect', () => {
