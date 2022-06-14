@@ -1,7 +1,7 @@
 # Real-Time Web: RijksQuizz
 RijksQuizz is een applicatie waarbij meerdere gebruikers kunnen gokken naar de schilder bij het schilderij. De schilderijen worden random ingeladen. 
 
-De website is [hier](https://lekker-chatten.herokuapp.com/ "RijksQuizz") te zien.
+De website is [hier](https://rijks-quizz.herokuapp.com/ "RijksQuizz") te zien.
 
 ![Screenshot](public/images/screenshot.png)
 
